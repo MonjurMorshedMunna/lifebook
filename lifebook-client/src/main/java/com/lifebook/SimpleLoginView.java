@@ -47,17 +47,16 @@ public class SimpleLoginView extends CustomComponent implements View, Button.Cli
         //Add both to a panel
         VerticalLayout fields = new VerticalLayout(user, password, loginButton);
         String captionText="";
+        //fields.setHeight("100%");
         fields.setCaption(captionText);
         fields.setSpacing(true);
         fields.setMargin(true);
-        fields.setComponentAlignment(user, Alignment.MIDDLE_CENTER);
-        fields.setComponentAlignment(password, Alignment.MIDDLE_CENTER);
-        fields.setComponentAlignment(loginButton, Alignment.MIDDLE_CENTER);
-        //fields.setSizeFull();
+        fields.setSizeUndefined();
+
 
         //the view root layout
         VerticalLayout viewLayout = new VerticalLayout(fields);
-        viewLayout.setSizeFull();
+        viewLayout.setHeight("100%");
         viewLayout.setComponentAlignment(fields, Alignment.MIDDLE_CENTER);
         viewLayout.setStyleName(Reindeer.LAYOUT_BLUE);
         setCompositionRoot(viewLayout);
